@@ -8,7 +8,9 @@ ts_library(
     tsconfig = "//:tsconfig.json",
     deps = [
        "//src/model",
-       "//src/frontend/friend:src"
+       "//src/frontend/friend:src",
+        "@npm//@types/react",
+        "@npm//react-dom",
     ]
 )
  
@@ -23,7 +25,7 @@ ts_devserver(
     port = 9999,
     serving_path = "/bundle.min.js",
     #entry_module = "react_samples/src/frontend/main",
-    deps = [":src"],
+    deps = [":src", "//:node_modules"],
     static_files = [
         ":index.html",
         "//:node_modules/react/umd/react.development.js",

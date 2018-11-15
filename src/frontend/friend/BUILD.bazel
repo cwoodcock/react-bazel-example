@@ -7,6 +7,8 @@ ts_library(
     srcs = ["friend.tsx", "friend-service.ts"],
     deps = [
         "//src/model",
-        "//src/frontend/config"
+        "//src/frontend/config",
+        "@npm//react",
+        "@npm//@types/react",
     ]
 )
